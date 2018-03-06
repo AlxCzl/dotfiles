@@ -1,0 +1,26 @@
+set nocompatible
+filetype off
+set encoding=utf8
+syntax on
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Vim-airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" NerdTree
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+" NerdCommenter
+Plugin 'scrooloose/nerdcommenter'
+
+call vundle#end() " Les plugins doivent etre ajoutes avant cette luigne
+" Fin Vundle
+
+filetype plugin on
+
+" Vim airline config
+let g:airline_powerline_fonts = 0 

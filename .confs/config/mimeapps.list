@@ -1,0 +1,8 @@
+[Added Associations]
+image/jpeg=ristretto.desktop;
+text/html=org.gnome.gedit.desktop;firefox.desktop;
+text/plain=org.gnome.gedit.desktop;
+image/bmp=ristretto.desktop;
+application/x-ole-storage=mousepad.desktop;
+image/gif=ristretto.desktop;
+video/x-msvideo=vlc.desktop;
