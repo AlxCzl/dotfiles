@@ -2,18 +2,24 @@
 
 Voici la sauvegarde de mes dotfiles (compatibles avec les PC EPITA).
 
-## Utilisation
+## Installation
 
-Pour utiliser mes dotfiles, il vous suffit d'utiliser le script suivant  :
+Pour installer mes dotfiles, il vous suffit d'utiliser le script suivant  :
 
+**ATTENTION** Le script va sauvegarder vos dotfiles dans le dossier .confs/backup, qu'il créera automatiquement.
+Les symlinks en revanche seront **supprimés**; soyez __vigilants !__ !
+
+```
+$ .confs/install.sh
+```
+
+Si vous n'utilisez pas le programme _afs_, le script va utiliser la variable d'environnement **$HOME**.
+Si cette dernière n'est pas set, veuillez renseigner le chemin jusqu'à votre répertoire /home comme cela :
 ```
 $ .confs/install.sh <VOTRE-HOME>
 ```
-**ATTENTION** utilisez le parametre \<VOTRE-HOME\> uniquement si vous n'êtes pas
-sur un pc de l'EPITA: en effet, le script utilise la variable d'environnement
-$AFS\_DIR et, si elle est vide, les symlinks ne seront pas bons !!
 
-Vous pouvez aussi restaurez cette config en creeant des symlinks manuellement.
+Vous pouvez aussi restaurez cette config en créeant des symlinks manuellement.
 
 ## Contenu
 
