@@ -7,7 +7,7 @@ Voici la sauvegarde de mes dotfiles (compatibles avec les PC EPITA).
 Pour installer mes dotfiles, il vous suffit d'utiliser le script suivant  :
 
 **ATTENTION** Le script va sauvegarder vos dotfiles dans le dossier .confs/backup, qu'il créera automatiquement.
-Les symlinks en revanche seront **supprimés**; soyez __vigilants !__ !
+Les symlinks en revanche seront **supprimés**; soyez __vigilants__ !!
 
 ```
 $ .confs/install.sh
