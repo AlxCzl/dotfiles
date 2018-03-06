@@ -3,6 +3,14 @@ filetype off
 set encoding=utf8
 syntax on
 
+" Code
+set tabstop=4
+
+" Colors for putty etc
+if $TERM == "xterm-256color"
+	set t_Co=256
+endif
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

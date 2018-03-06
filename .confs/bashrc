@@ -5,6 +5,7 @@
 #export LANG=en_US.utf8
 #export NNTPSERVER="news.epita.fr"
 export EDITOR=vim
+export TERM=xterm-256color
 
 ## History
 export HISTSIZE=10000
@@ -63,4 +64,4 @@ function ii()   # Get current host related info.
 }
 
 ## Term Color
-PS1='\[\e[1;97m\][\[\e[1;31m\]\u@\h\[\e[1;97m\]]\[\e[1;37m\] \w \$ \[\e[0m\]'
+PS1='\[\e[1;97m\]<\[\e[1;31m\]\u\e[1;97m@\e[1;31m\h\[\e[1;97m\]>\[\e[1;37m\] \w \$ \[\e[0m\]'

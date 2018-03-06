@@ -7,6 +7,7 @@
 .confs/config/enchant/
 .confs/vim/bundle/*
 !.confs/vim/bundle/Vundle.vim/
+.confs/backup/
 
 # Ignorer le .gitconfig #
 #########################
