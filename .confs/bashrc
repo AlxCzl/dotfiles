@@ -11,10 +11,6 @@ export TERM=xterm-256color
 export HISTSIZE=10000
 export HISTFILESIZE=120000
 
-## AutoCompletion
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-
 ## Aliases
 # ls
 alias ls='ls --color=auto'
@@ -36,7 +32,7 @@ alias ..='cd ..'
 alias more='less'
 export PAGER=less
 export LESSCHARSET='utf-8'
-export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+export LESS='-i -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
 # LESS man page colors (makes Man pages more readable).
