@@ -11,22 +11,18 @@ if $TERM == "xterm-256color"
 	set t_Co=256
 endif
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+" Vim-Plug
+call plug#begin()
 
 " Vim-airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " NerdTree
-Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/scrooloose/nerdtree.git'
 " NerdCommenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
-call vundle#end() " Les plugins doivent etre ajoutes avant cette luigne
-" Fin Vundle
+call plug#end() " Les plugins doivent etre ajoutes avant cette luigne
 
 filetype plugin on
 
