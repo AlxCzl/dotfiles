@@ -40,6 +40,7 @@ for f in $dot_list; do
 		mv "$HOME/.$f" "$dotdir/backup/"
 		echo -e "\033[0;32mDONE\033[0m :: Successfuly backed up \033[0;31m.$f\033[0m to \033[0;31m$dotdir/backup\033[0m"
 	fi
+
 	ln -s "$dotdir/$f" "$HOME/.$f"
 done
 
