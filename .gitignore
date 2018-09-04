@@ -5,8 +5,7 @@
 .confs/config/NuGet/
 .confs/config/dconf/
 .confs/config/enchant/
-.confs/vim/bundle/*
-!.confs/vim/bundle/Vundle.vim/
+.confs/vim/plugged/*
 .confs/backup/
 
 # Ignorer le .gitconfig #
