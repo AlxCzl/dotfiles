@@ -5,11 +5,27 @@ syntax on
 
 " Code
 set tabstop=4
-
+set hlsearch
 " Colors for putty etc
 if $TERM == "xterm-256color"
 	set t_Co=256
 endif
+
+" Remove trailing whitespace
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+autocmd BufWritePre * :call TrimWhiteSpace()
 
 " Vim-Plug
 call plug#begin()
