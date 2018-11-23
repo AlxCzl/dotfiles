@@ -37,8 +37,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 " NerdCommenter
 Plug 'scrooloose/nerdcommenter'
-" SulbimeMonokai theme
-Plug 'https://github.com/ErichDonGubler/vim-sublime-monokai'
+" Monokai theme
+Plug 'https://github.com/sickill/vim-monokai'
 
 call plug#end() " Les plugins doivent etre ajoutes avant cette luigne
 
