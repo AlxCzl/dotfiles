@@ -44,5 +44,8 @@ call plug#end() " Les plugins doivent etre ajoutes avant cette luigne
 
 filetype plugin on
 
+" Theme
+colorscheme monokai
+
 " Vim airline config
 let g:airline_powerline_fonts = 0 
