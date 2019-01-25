@@ -1,15 +1,12 @@
 set nocompatible
-filetype off
-set encoding=utf8
-syntax on
+set mouse=a
 
-" Code
-set tabstop=4
+""" Code needs
+set ts=8 sts=0 et sw=4 smarttab
 set hlsearch
-" Colors for putty etc
-if $TERM == "xterm-256color"
-	set t_Co=256
-endif
+syntax on
+set encoding=utf-8
+filetype off
 
 " Remove trailing whitespace
 function! Trimwhitespace()
@@ -27,7 +24,17 @@ autocmd BufWinLeave * call clearmatches()
 
 autocmd BufWritePre * :call Trimwhitespace()
 
-" Vim-Plug
+
+""" Keybindings
+" Indentation fix
+map <F7> mzgg=G`z
+
+" Plugins
+map ; :Files<CR>
+map <C-o> :NERDTreeToggle<CR>
+
+
+""" Vim-Plug
 call plug#begin()
 
 " Vim-airline
@@ -37,15 +44,47 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 " NerdCommenter
 Plug 'scrooloose/nerdcommenter'
+" CSS-color
+Plug 'https://github.com/ap/vim-css-color'
+" Fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim'
+" Surround
+Plug 'https://github.com/tpope/vim-surround'
+" EditorConfig
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+" Ale Linter
+Plug 'https://github.com/w0rp/ale'
+" Python autocompletion
+"Plug 'https://github.com/davidhalter/jedi-vim'
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " Monokai theme
 Plug 'https://github.com/sickill/vim-monokai'
+" Gruvbox theme
+Plug 'https://github.com/morhetz/gruvbox'
 
-call plug#end() " Les plugins doivent etre ajoutes avant cette luigne
+call plug#end()
 
 filetype plugin on
 
-" Theme
-colorscheme monokai
+" Term colors and themes
+if $TERM == "xterm-256color"
+    set t_Co=256
+endif
+
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
 
 " Vim airline config
-let g:airline_powerline_fonts = 0 
+let g:airline_powerline_fonts = 0
+
+" Mardown preview
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_browser = 'firefox'
+let g:mkdp_command_for_global = 0
+let g:mkdp_open_to_the_world = 0
