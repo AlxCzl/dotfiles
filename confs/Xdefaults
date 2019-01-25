@@ -1,34 +1,34 @@
 !-----------------------------------------
 ! XFT
 !-----------------------------------------
-Xft.dpi: 		    100
+Xft.dpi: 		100
 Xft.antialias: 	true
-Xft.hinting: 	  true
+Xft.hinting: 	true
 Xft.hintstyle:	hintfull
-Xft.rgba: 		  rgba
+Xft.rgba: 		rgba
 
 
 !-----------------------------------------
 ! URxvt settings with zenburn theme
 !-----------------------------------------
-URxvt*termName: 		    rxvt-unicode-256color
-URxvt*loginShell: 		  true
-URxvt*scrollBar: 		    false
+URxvt*termName: 		rxvt-unicode-256color
+URxvt*loginShell: 		true
+URxvt*scrollBar: 		false
 URxvt*secondaryScroll: 	true
-URxvt*saveLines: 		    65535
+URxvt*saveLines: 		65535
 URxvt*cursorUnderline: 	false
-URxvt*urgentOnBell: 	  true
-URxvt*cursorBlink: 		  false
-URxvt*depth: 			      32
+URxvt*urgentOnBell: 	true
+URxvt*cursorBlink: 		false
+URxvt*depth: 			32
 URxvt*ineheritPixmap: 	true
-URxvt*transparent:		  false
-URxvt*fading:			      0
+URxvt*transparent:		false
+URxvt*fading:			0
 
 ! Extensions
-URxvt*perl-lib: 		    /usr/lib/urxvt/perl/
+URxvt*perl-lib: 		/usr/lib/urxvt/perl/
 URxvt*perl-ext-common: 	default,matcher,searchable-scrollback
-URxvt*urlLauncher: 		  firefox
-URxvt*matcher.button:   1
+URxvt*urlLauncher: 		firefox
+URxvt*matcher.button: 	1
 
 
 ! Catch ugly URLs
@@ -36,10 +36,10 @@ URxvt*cutchars: '"'()*<>[]{|}
 
 
 ! Font Appearance
-URxvt*font: 			    xft:terminus:size=13
-URxvt*boldFont:			  xft:terminus:bold:size=13
+URxvt*font: 			xft:terminus:size=13
+URxvt*boldFont:			xft:terminus:bold:size=13
 URxvt*italicFont: 		xft:terminus:italic:size=13
-URxvt*boldItalicFont: xft:terminus:bold:italic:size=13
+URxvt*boldItalicFont: 	xft:terminus:bold:italic:size=13
 
 
 ! Color Scheme
