@@ -1,13 +1,8 @@
+et exrc
 set nocompatible
 set mouse=a
-
-""" Code needs
-set ts=8 sts=0 et sw=4 smarttab
-set hlsearch
-syntax on
-set encoding=utf-8
-filetype off
-
+set number relativenumber
+set cc=80
 " Remove trailing whitespace
 function! Trimwhitespace()
     let l:save = winsaveview()
@@ -24,7 +19,6 @@ autocmd BufWinLeave * call clearmatches()
 
 autocmd BufWritePre * :call Trimwhitespace()
 
-
 """ Keybindings
 " Indentation fix
 map <F7> mzgg=G`z
@@ -32,7 +26,6 @@ map <F7> mzgg=G`z
 " Plugins
 map ; :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
-
 
 """ Vim-Plug
 call plug#begin()
@@ -53,12 +46,20 @@ Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/tpope/vim-surround'
 " EditorConfig
 Plug 'https://github.com/editorconfig/editorconfig-vim'
-" Ale Linter
-Plug 'https://github.com/w0rp/ale'
-" Python autocompletion
-"Plug 'https://github.com/davidhalter/jedi-vim'
-" Markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" Syntastic
+Plug 'vim-syntastic/syntastic'
+" javacomplete
+Plug 'vim-scripts/javacomplete'
+" youcompleteme
+" Plug 'valloric/youcompleteme'
+" Asyncrun
+Plug 'https://github.com/skywind3000/asyncrun.vim'
+" Latex
+Plug 'lervag/vimtex'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Monokai theme
 Plug 'https://github.com/sickill/vim-monokai'
@@ -67,7 +68,12 @@ Plug 'https://github.com/morhetz/gruvbox'
 
 call plug#end()
 
+" Code needs
+set ts=4 sw=4 smarttab et ci ai
+set hlsearch
+set encoding=utf-8
 filetype plugin on
+syntax on
 
 " Term colors and themes
 if $TERM == "xterm-256color"
@@ -85,6 +91,12 @@ let g:airline_powerline_fonts = 0
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
-let g:mkdp_browser = 'firefox'
-let g:mkdp_command_for_global = 0
-let g:mkdp_open_to_the_world = 0
+
+" You complete me
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+" Syntastic
+let g:syntastic_c_compiler = 'gcc'
+let g:syntastic_c_compiler_options = '-Wall -Wextra -Werror -std=c99 -pedantic'
+
+set secure
