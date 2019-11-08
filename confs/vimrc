@@ -1,4 +1,4 @@
-et exrc
+set exrc
 set nocompatible
 set mouse=a
 set number relativenumber
